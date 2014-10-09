@@ -1,0 +1,42 @@
+extends layout
+
+block content
+	#blog
+		form#newpost
+			h1 Database Management Form:
+			p.formtitle Add a new beer (dont use any special characters including '$' and '%')
+			input(type="text", name="title", placeholder="Beer Name")
+			&nbsp;
+			input(type="text", name="brand", placeholder="Brewery")
+			&nbsp;
+			input(type="text", name="location", placeholder="Brewery Location")
+			br
+			input(type="text", name="content", placeholder="ABV %")
+			&nbsp;
+			input(type="text", name="rating", placeholder="More info URL")
+			br
+			input(type="text", name="pricea", placeholder="64oz Growler Price")
+			&nbsp;
+			input(type="text", name="priceb", placeholder="32oz Growler Price")
+			&nbsp;
+			input(type="text", name="pricec", placeholder="16oz Growler Price")
+			br
+			input(type="submit")
+		p 
+			br
+			hr
+			br
+		h1 Preview Current List:
+		p.formtitle Click "delete" to remove beer.
+		ul#posts
+
+	script#post-template(type="text/template").
+		<span class="beertitle"><%= title %></span> <span class="abv">ABV: <%= content %>%</span><br />	
+		<span><%= brand %></span><br />
+		<span><%= location %></span><br />
+		<p><span id="priceheader">Growler Sizes & Prices:<br></span><span id="price"><strong>64oz:</strong> $<%= pricea %></span> <span id="price"><strong>32oz:</strong> $<%= priceb %></span>   <span id="price"><strong>16oz:</strong> $<%= pricec %></span><br /></p>
+		<div>
+			<button class="delete">Delete</button>
+		</div>
+	script(type="text/javascript").
+		var bootstrapPosts = !{JSON.stringify(posts)};

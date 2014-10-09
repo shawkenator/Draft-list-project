@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	#blog
+		ul#posts
+
+	script#post-template(type="text/template").
+		<h3><%= title %></h3>
+		<span><%= brand %></span><br />
+		<span>ABV: <%= content %></span><br />
+		<span>Location: <%= location %></span><br />
+		<span>Rating(1/100): <%= rating %></span>
+	script(type="text/javascript").
+		var bootstrapPosts = !{JSON.stringify(posts)};

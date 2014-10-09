@@ -1,0 +1,50 @@
+@import url("http://fonts.googleapis.com/css?family=Roboto");
+
+body {
+	font: 14px "Roboto", Helvetica, Arial, sans-serif;
+	padding-left: 10px;
+}
+
+a {
+	color: #00B7FF;
+}
+#posts li {
+	width:29%;
+	float:left;
+	padding-bottom: 10px;
+	box-sizing: border-box;
+	padding-left: 10px;
+	padding-top: 10px;
+	font-family: 'Roboto';
+	font-size: 14px;
+	margin-left: 15px;
+	margin-top: 5px;
+
+}
+.container #posts li {
+	/* border: 1px dotted #666; */
+	box-shadow: 3px 3px 3px #999999;
+}
+
+#posts {
+	list-style-type: none;
+	width: 100%;
+}
+#price {
+	padding-right:5px;
+	margin: 0 0 2em;
+	font-size: 12px;
+}
+#priceheader{
+	font-size: 11px;
+}
+.abv {
+	float:right;
+	padding-right: 15px;
+	font-size: 12px;
+	color: red;
+}
+.beertitle {
+	font-weight: bold;
+	font-size: 15px;
+}

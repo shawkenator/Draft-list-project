@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	#blog
+		.container
+			ul#posts
+
+	script#post-template(type="text/template").
+		<span class="beertitle"><%= title %></span> <span class="abv">ABV: <%= content %>%</span><br />	
+		<span><%= brand %></span><br />
+		<span><%= location %></span><br />
+		<p><span id="priceheader">Growler Sizes & Prices:<br></span><span id="price"><strong>64oz:</strong> $<%= pricea %></span> <span id="price"><strong>32oz:</strong> $<%= priceb %></span>   <span id="price"><strong>16oz:</strong> $<%= pricec %></span><br /></p>
+		
+					
+		<span><a href="<%= rating %>" target="_blank">More Info</a></span>
+	script(type="text/javascript").
+		var bootstrapPosts = !{JSON.stringify(posts)};
